@@ -35,7 +35,7 @@
             background-color: #ff6f61;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -70,8 +70,8 @@
             overflow: hidden;
         }
         .popup img {
-            max-width: auto;
-            height: 50%;
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
         }
         .popup h2 {
@@ -90,13 +90,31 @@
         }
         @media screen and (max-width: 600px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
             .message {
                 font-size: 1.1em;
             }
             .popup h2 {
                 font-size: 1.5em;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 1.1em;
+            }
+            .heart {
+                font-size: 2.5em;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p, .message {
+                font-size: 1em;
+            }
+            .popup h2 {
+                font-size: 1.3em;
             }
         }
     </style>
@@ -122,7 +140,7 @@
     <script>
         // Extract name from the URL parameter
         const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name') || 'Kanak singh';
+        const name = urlParams.get('name') || 'Kanak Singh';
         
         // Set girlfriend's name in the greeting
         document.getElementById('girlfriendName').innerText = name;
